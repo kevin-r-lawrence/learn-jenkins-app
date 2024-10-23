@@ -12,13 +12,20 @@ pipeline {
             steps {
                 echo 'Building Learn-Jenkins-App...'
                 sh '''
-                    ls -a
+                    ls -la
                     node --version
                     npm --version
                     npm ci
                     npm run build
-                    ls -a
+                    ls -la
                 '''
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Test Stage'
+
             }
         }
     }
