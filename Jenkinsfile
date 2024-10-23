@@ -47,7 +47,7 @@ pipeline {
             steps {
                 echo 'Deploying Learn-Jenkins-App...'
                 sh '''
-                    npm install netlify-cli -g
+                    npm install netlify-cli
                     netlify --version
                 '''
             }
